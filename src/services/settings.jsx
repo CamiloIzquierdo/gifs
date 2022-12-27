@@ -1,3 +1,3 @@
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = "vZpFfulWboeRG08Bi7Z9uJEsNLZr1EgR";
 
 export { API_KEY };
