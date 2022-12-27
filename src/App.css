@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+/* body {
+    --white: white;
+    --dark: #282c34;
+    --red: red;
+    --blue: blue;
+    --red: green;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+    text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-content {
+    background-color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: var(--white);
+    padding: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.dark {
+    --white: #282c34;
+    --dark: white;
+} */
+
+.App {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-logo {
+    margin: 10px auto;
+    padding: 20px 0;
+    width: 144px;
+}
+
+.App-logo img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.App-title {
+    color: white;
+}
+
+.App-content {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    min-height: 100vh;
+    padding: 16px;
+    text-align: left;
+}
+
+/*----------*/
+
+.App-main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+
+.App-wrapper {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 0.5em;
+}
+
+.App-results {
+    flex-shrink: 2;
+}
+
+.App-category {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+    .App-main {
+        flex-direction: initial;
+    }
+    .App-category {
+        padding: 0 2em;
+        position: sticky;
+        top: 0;
+        width: 40%;
+    }
+}
+
+.btn {
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    background-color: var(--brand-color_3);
+    color: var(--theme-body-txt);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.btn:hover {
+    background-color: var(--brand-color_6);
 }
