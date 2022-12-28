@@ -5,11 +5,11 @@ import SearchForm from "../../components/SearchForm";
 import Spinner from "../../components/Spinner";
 import TrendingSearches from "../../components/TrendingSearches/Trending";
 import { useGifs } from "../../hooks/useGifs";
+import { Helmet } from "react-helmet";
 
-export default function Home() {
+export default function Home({ gif }) {
     const [path, pushLocation] = useLocation();
     const { loading, gifs } = useGifs();
-
     const handleSubmit = useCallback(
         ({ keyword }) => {
             pushLocation(`/search/${keyword}`);
@@ -19,6 +19,9 @@ export default function Home() {
 
     return (
         <>
+            <Helmet>
+                <title>Home | Giffy</title>
+            </Helmet>
             <SearchForm onSubmit={handleSubmit} />
             {loading ? (
                 <Spinner />
